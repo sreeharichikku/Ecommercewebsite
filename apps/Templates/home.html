@@ -1,0 +1,104 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Furniture Store</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css'%}" />
+
+
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" ></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">                                     <!--Navigation Bar-->
+		<a class="navbar-brand" href=>
+		<img src="{% static sl.png %}" height="40" width="180" alt="logo"><br></a>
+
+		<a class="navbar-brand" href="#"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="">Home </a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="contact">Contact Us</a>
+				</li>
+
+				<li class="nav-item">
+					<a class="nav-link" href="product">Shop Now</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="cart" > Cart</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href=" " id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">User</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						 <a class="dropdown-item" href="register">Sign Up</a>
+						 <a class="dropdown-item" href="login">Sign In</a>
+						 <a class="dropdown-item" href="logout">Sign Out</a>
+					</div>
+                </li>
+
+                <li class="nav-item">
+                {% if user.is_authenticated %}
+               <a class="nav-link">Welcome {{ user.username }}</a>
+               {% endif %}
+                </li>
+            </ul>
+        </div>
+</nav>
+
+    <main>
+
+        <section class="central-content">
+            <article class="central-content-text">
+                <h1>New Furniture Collections</h1>
+                <p>Check our brand new fall items!</p>
+               <button type="button"> <a href="product"> Shop now </a></button>
+            </article>
+            <article class="central-content-image">
+                <img src="{% static 'image/dj.jpg'%}" alt="" />
+            </article>
+        </section>
+        <section class="services">
+            <article class="shipping">
+                <div class="services-image-wrapper">
+                    <img src="./Media/free-shipping.png" alt="" />
+                </div>
+                <h4 class="services-titles">free shipping</h4>
+
+            </article>
+            <article class="deals">
+                <div class="services-image-wrapper">
+                    <img src="./Media/amazing-deals.png" alt="" />
+                </div>
+                <h4 class="services-titles">amazing deals</h4>
+
+            </article>
+            <article class="customer-service">
+                <div class="services-image-wrapper">
+                    <img src="./Media/customer-service.png" alt="" />
+                </div>
+                <h4 class="services-titles">top customer service</h4>
+
+            </article>
+        </section>
+    </main>
+
+</body>
+
+</html>

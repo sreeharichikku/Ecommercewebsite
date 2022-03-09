@@ -1,0 +1,19 @@
+
+.product-big-title-area {background: url(furniture.png) repeat scroll 0 0 #1ABC9C}
+
+.product-bit-title h2 {
+  font-family: raleway;
+  font-size: 50px;
+  font-weight: 200;
+  margin: 0;
+  padding: 40px 0;color: #fff;
+}
+.button {
+width: 130px;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: none;
+    background-color: #cac3c3;
+    color: #534c4b;
+}
